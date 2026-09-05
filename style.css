@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    font-family: "Helvetica", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+.hero-section{
+    width: 100%;
+    height: 98vh;
+    background-image: url(img/backround-img.jpg);
+    background-size: cover;
+    position: relative;
+}
+.overlay-black{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 80%);
+
+}
+.nav-bar {
+    width: 100%;
+    height: 70px;
+}
+
+
+/* 
+   CHANGED:
+   Added height: 100%.
+
+   WHY:
+   Makes .nav-element occupy the full 70px height of .nav-bar,
+   so align-items: center can properly center the contents vertically.
+*/
+.nav-element {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+    /*
+       Keeps the logo on the left and .right-nav on the right.
+       The available space between them automatically adjusts.
+    */
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.nav-bar img {
+    width: 150px;
+
+    /*
+       You can change this margin to move ONLY the logo.
+
+       Example:
+       margin-left: 30px;
+       margin-left: 50px;
+       margin-left: 100px;
+
+       The .right-nav will remain on the right because
+       .nav-element uses justify-content: space-between.
+    */
+    margin: 25px 0px 0px 150px;
+}
+
+
+/* =========================
+   RIGHT NAVIGATION
+   ========================= */
+
+.right-nav {
+    display: flex;
+    flex-direction: row;
+
+    /*
+       Space between the language selector and Sign In button.
+    */
+    gap: 8px;
+
+    /*
+       CHANGED:
+       Removed "justify-content: top".
+
+       WHY:
+       "top" is NOT a valid value for justify-content.
+       The default behavior is enough here because we only
+       need the items arranged horizontally.
+    */
+
+    /*
+       Added margin-right.
+
+       WHY:
+       This controls how far the right navigation is
+       from the right edge of the navbar.
+
+       This is independent of the logo's margin-left.
+    */
+    margin: 20px 150px 0px 0px;
+}
+
+
+/* =========================
+   LANGUAGE SELECTOR
+   ========================= */
+
+.language {
+    border: 0.2px solid rgb(94, 94, 94);
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    padding: 8px 16px 4px 16px;
+
+    color: white;
+    background-color: black;
+}
+
+
+.language .icon {
+    font-size: 18px;
+}
+.language .icon-down {
+    font-size: 10px;
+}
+
+.language h3 {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+
+/* =========================
+   SIGN IN BUTTON
+   ========================= */
+
+.right-nav button {
+    padding: 8px 18px;
+
+    border: none;
+
+    background-color: red;
+    color: white;
+
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.hero-section{
+    display: flex;
+    flex-direction: column;
+}
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.hero-content h1{
+    width: 600px;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+.hero-content h3{
+    font-size: 20px;
+    margin-bottom: 39px;
+}
+.hero-content p{
+    margin-bottom: 20px;
+}
+.hero-content .get-started{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.get-started input{
+    padding: 15px 115px 15px 16px;
+    background-color: rgb(0, 0, 0,0.5);
+    border: 1px solid rgb(95, 94, 94);
+    border-radius: 5px;
+    font-size: 20px;
+}
+.get-started button{
+    background-color: rgb(229, 9, 20);
+    color: white;
+    border: none;
+    padding: 0px 30px 0px 30px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+.get-started .bx-chevron-right{
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+}
+.section-2{
+    border: 1px solid black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.part-1{
+    width: 100%;
+    height: 10vh;
+    border: 1px solid black;
+}
+.arc{
+    width: 100%;
+    height: 10px;
+    margin: 88.9vh 0px 0px 0px;
+    border-radius: inherit;
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+}
